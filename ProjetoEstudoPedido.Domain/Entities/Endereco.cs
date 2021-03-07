@@ -11,6 +11,7 @@
         public string Cep { get; set; }
         public int IdCidade { get; set; }// chave estrangeira
         public virtual Cidade Cidade { get; set; }
+        public virtual Cliente Cliente { get; set; }
 
     }
 }

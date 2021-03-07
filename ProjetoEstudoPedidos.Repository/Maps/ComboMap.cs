@@ -15,6 +15,11 @@ namespace ProjetoEstudoPedidos.Repository
             builder.Property(x => x.Preco).HasColumnName("preco").HasPrecision(17, 2).IsRequired();
 
             builder.Property(x => x.Ativo).HasColumnName("ativo").IsRequired();
+
+            builder.Property(x => x.IdImagem).HasColumnName("id_imagem").IsRequired();
+            builder.HasOne(x => x.Imagem).WithMany().HasForeignKey(x => x.IdImagem);
+
+            builder.HasMany(x => x.Produtos).WithMany(x => x.Combos); // muitos para muitos
         }
     }
 }

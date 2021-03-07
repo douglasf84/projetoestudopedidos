@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace ProjetoEstudoPedidos.Domain
 {
     public class Cliente : BaseDomain, IExibivel
@@ -10,6 +12,8 @@ namespace ProjetoEstudoPedidos.Domain
         public virtual Endereco Endereco { get; set; }
 
         public bool Ativo { get; set; }
+
+        public List<Pedido> Pedidos { get; set; }
 
 
     }

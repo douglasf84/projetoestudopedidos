@@ -12,5 +12,7 @@ namespace ProjetoEstudoPedidos.Domain
 
         public bool Ativo { get; set; }
 
+        public virtual List<Produto> Produtos { get; set; }
+
     }
 }
