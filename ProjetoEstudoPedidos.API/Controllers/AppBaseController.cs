@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace ProjetoEstudoPedidos.API.Controllers
 {
- 
+    [ApiController]
+    [Route("[controller]")]
     public class AppBaseController : ControllerBase
     {
         protected readonly IServiceProvider ServiceProvider;

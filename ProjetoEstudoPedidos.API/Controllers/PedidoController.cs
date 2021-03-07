@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProjetoEstudoPedidos.API.Controllers
 {
-
-    public class AppBasePedidoController : AppBaseController
+    [ApiController]
+    [Route("[controller]")]
+    public class PedidoController : AppBaseController
     {
-        public AppBasePedidoController(IServiceProvider serviceProvider) : base(serviceProvider)
+        public PedidoController(IServiceProvider serviceProvider) : base(serviceProvider)
         {
         }
 

@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using ProjetoEstudoPedidos.Interface;
+using ProjetoEstudoPedidos.Repository;
 
 namespace ProjetoEstudoPedidos.API
 {
@@ -10,7 +12,8 @@ namespace ProjetoEstudoPedidos.API
         }
 
         public static void RepositoryDependence(IServiceCollection serviveProvider)
-        { 
+        {
+            serviveProvider.AddScoped<IProdutoRepository, ProdutoRepository>();
         }
     }
 }

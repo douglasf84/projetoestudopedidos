@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositores\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ProjetoEstudoPedido.Domain\ProjetoEstudoPedidos.Domain.csproj" />
   </ItemGroup>
 
