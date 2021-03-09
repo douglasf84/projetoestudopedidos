@@ -26,5 +26,30 @@ namespace ProjetoEstudoPedidos.API.Controllers
             return rep.Get();
         }
 
+        [HttpGet]
+        [Route("search/{text}/{pagina?}")]
+        public dynamic GetSearch(string text, int pagina = 1)
+        {
+            var rep = (IProdutoRepository)ServiceProvider.GetService(typeof(IProdutoRepository));
+            return rep.Search(text, pagina);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public Produto Detail(int? id)
+        {
+            if ((id ?? 0) > 0)
+            {
+                var rep = (IProdutoRepository)ServiceProvider.GetService(typeof(IProdutoRepository));
+                return rep.Detail(id.Value);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+
     }
 }

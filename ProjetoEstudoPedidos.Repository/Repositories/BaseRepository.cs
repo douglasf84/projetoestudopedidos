@@ -10,9 +10,10 @@ namespace ProjetoEstudoPedidos.Repository
 {
    
     public class BaseRepository
-    { 
-        protected readonly ApplicationDbContext DbContext;
-        
+    {
+        protected const int TamanhoPagina = 5;
+
+        protected readonly ApplicationDbContext DbContext;        
         public BaseRepository(ApplicationDbContext dbContext)
         {
             DbContext = dbContext;
